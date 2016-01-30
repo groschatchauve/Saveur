@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maquette.controller.CommandeController">
+   <children>
+      <ComboBox fx:id="cmbClient" onAction="#cmbClient_OnAction" prefWidth="150.0" promptText="Client" />
+      <ComboBox fx:id="cmbProduit" onAction="#cmbProduit_OnAction" prefWidth="150.0" promptText="Produit" />
+      <TextField fx:id="txtQuantite" onAction="#txtQuantite_OnAction" prefHeight="25.0" prefWidth="136.0" promptText="quantité" />
+      <HBox prefHeight="0.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#btnCancel_OnAction" text="Annuler" />
+            <Button fx:id="btnOk" mnemonicParsing="false" onAction="#btnOk_OnAction" text="Ok" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
