@@ -13,3 +13,8 @@ hs_err_pid*
 /Maquette/nbproject/private/
 /Maquette/dist/
 /Maquette/build/
+Maquette/nbproject/project.properties
+*.properties
+Maquette/nbproject/project.xml
+*.xml
+Maquette/manifest.mf
