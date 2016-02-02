@@ -10,24 +10,25 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import maquette.Maquette;
 
-public class CommandeController implements Initializable {
-    @FXML
-    private ComboBox<String> cmbClient;
-    @FXML
-    private ComboBox<String> cmbProduit;
-    @FXML
-    private TextField txtQuantite;
+public class ApprovisionnementController implements Initializable {
+
     @FXML
     private Button btnCancel;
     @FXML
     private Button btnOk;
+    @FXML
+    private ComboBox<String> cmbFournisseur;
+    @FXML
+    private ComboBox<String> cmbProduit;
+    @FXML
+    private TextField txtQuantite;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        cmbClient.getItems().setAll("Alpha","Bravo", "Charlie", "Delta", "Foxtrot");
-        cmbProduit.getItems().setAll("foie gras", "caviar", "truffe", "macaron", "homard");
-    }    
+        cmbFournisseur.getItems().addAll("Marché Noir", "Fournis Tout", "SuperFour");
+        cmbProduit.getItems().addAll("sel","poivre","sucre","safran","eau");
 
+    }
 
     @FXML
     private void btnCancel_OnAction(ActionEvent event) {
@@ -38,9 +39,10 @@ public class CommandeController implements Initializable {
     private void btnOk_OnAction(ActionEvent event) {
         String q = txtQuantite.getText();
         String p = cmbProduit.getValue();
-        String c = cmbClient.getValue();
-        if(q.matches("[0-9]*") && !p.equals("Produit") && !c.equals("Client"))
-            Maquette.message(p+" (x"+q+") commandé pour le client "+ c);
+        String f = cmbFournisseur.getValue();
+        if (q.matches("[0-9]*") && !p.equals("Produit") && !f.equals("Client")) {
+            Maquette.message(p + " (x" + q + ") commandé au fournisseur " + f);
+        }
     }
 
 }

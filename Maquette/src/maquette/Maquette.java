@@ -15,8 +15,8 @@ import javafx.stage.Stage;
 
 public class Maquette extends Application {
 
-    private static Stage stage;
-    private static Scene menu;
+    public static Stage stage;
+    public static Scene menu;
 
     @Override
     public void start(Stage primaryStage) {
@@ -41,6 +41,9 @@ public class Maquette extends Application {
         root.getChildren().add(btn);
 
         btn = createButton("Clients", "view/ClientView.fxml");
+        root.getChildren().add(btn);
+        
+        btn = createButton("Primes", "view/PrimeView.fxml");
         root.getChildren().add(btn);
 
         menu = new Scene(root);
@@ -72,7 +75,7 @@ public class Maquette extends Application {
         }
     }
 
-    private static void goToWindow(Parent FXMLView) {
+    public static void goToWindow(Parent FXMLView) {
         Scene scene = new Scene(FXMLView);
         stage.hide();
         stage.setScene(scene);

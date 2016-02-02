@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="105.0" prefWidth="180.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maquette.controller.PrimeController">
+    <children>     
+        <VBox VBox.vgrow="ALWAYS" />    
+        <HBox>
+            <children>
+                <HBox HBox.hgrow="ALWAYS" /> 
+                <ComboBox fx:id="cmbCommercial" prefWidth="150.0" promptText="Commercial" />                                
+                <HBox HBox.hgrow="ALWAYS" /> 
+            </children>
+        </HBox>        
+        <VBox VBox.vgrow="ALWAYS" />    
+        <HBox>
+            <children>
+                <HBox HBox.hgrow="ALWAYS" /> 
+                <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#btnCancel_OnAction" text="Annuler" />
+                <HBox HBox.hgrow="ALWAYS" /> 
+                <Button fx:id="btnOk" mnemonicParsing="false" onAction="#btnOk_OnAction" text="Ok" />
+                <HBox HBox.hgrow="ALWAYS" /> 
+            </children>
+        </HBox>        
+        <VBox VBox.vgrow="ALWAYS" />    
+    </children>
+</VBox>

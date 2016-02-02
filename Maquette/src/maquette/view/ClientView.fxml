@@ -6,33 +6,41 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox prefHeight="196.0" prefWidth="192.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maquette.controller.CommandeController">
+<VBox prefHeight="215.0" prefWidth="202.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maquette.controller.ClientController">
     <children>
         <VBox VBox.vgrow="ALWAYS" /> 
         <HBox>
             <children>
-                <HBox HBox.hgrow="ALWAYS" />
-                <ComboBox fx:id="cmbClient" prefWidth="150.0" promptText="Client" />                                
+                <HBox HBox.hgrow="ALWAYS" /> 
+                <TextField promptText="Référence" />
                 <HBox HBox.hgrow="ALWAYS" /> 
             </children>
-        </HBox>        
+        </HBox>
         <VBox VBox.vgrow="ALWAYS" /> 
         <HBox>
             <children>
                 <HBox HBox.hgrow="ALWAYS" /> 
-                <ComboBox fx:id="cmbProduit" prefWidth="150.0" promptText="Produit" />                                
+                <TextField promptText="Désignation" />
                 <HBox HBox.hgrow="ALWAYS" /> 
             </children>
-        </HBox>        
+        </HBox>
         <VBox VBox.vgrow="ALWAYS" /> 
         <HBox>
             <children>
                 <HBox HBox.hgrow="ALWAYS" /> 
-                <TextField fx:id="txtQuantite" prefHeight="25.0" prefWidth="136.0" promptText="quantité" />                                
+                <TextField promptText="Adresse Livraiison" />
                 <HBox HBox.hgrow="ALWAYS" /> 
             </children>
-        </HBox>        
+        </HBox>
         <VBox VBox.vgrow="ALWAYS" /> 
+        <HBox>
+            <children>
+                <HBox HBox.hgrow="ALWAYS" /> 
+                <TextField promptText="Adresse Facturation" />
+                <HBox HBox.hgrow="ALWAYS" /> 
+            </children>
+        </HBox>
+        <VBox VBox.vgrow="ALWAYS"/> 
         <HBox>
             <children>
                 <HBox HBox.hgrow="ALWAYS" /> 
@@ -41,7 +49,7 @@
                 <Button fx:id="btnOk" mnemonicParsing="false" onAction="#btnOk_OnAction" text="Ok" />
                 <HBox HBox.hgrow="ALWAYS" /> 
             </children>
-        </HBox>        
+        </HBox>
         <VBox VBox.vgrow="ALWAYS" /> 
     </children>
 </VBox>
